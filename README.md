@@ -9,12 +9,24 @@ Using the register page preprod.backmarket.fr/register
 * [**E2E tests**](cypress/integration/register.spec.js) : 
 https://github.com/RomainSeite/backMarketRegister/blob/master/cypress/videos/register.spec.js.mp4
 
-* [Video](#Video)
-reportBlackMarketregister.png
-dashboardBackMarketRegistration.png
+* [**Video**](#Video)
+
+* [**Screenshots**](#Screenshots)
+
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### Video
 
 ![Video](cypress/videos/register.spec.js.gif)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+### Screenshots
+
+**Dashboard :
+![dashboard](cypress/screenshots/dashboardBackMarketRegistration.png)
+
+**Report** :
+![**report**](cypress/screenshots/reportBlackMarketregister.png)
