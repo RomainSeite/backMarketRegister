@@ -13,4 +13,4 @@ dashboardBackMarketRegistration.png
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ![Video](cypress/integration/videos/register.spec.js.mp4)
-cypress/integration/videos/register.spec.js.mp4
+[Video](cypress/integration/videos/register.spec.js.mp4)
