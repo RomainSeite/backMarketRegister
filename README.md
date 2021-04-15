@@ -2,6 +2,9 @@
 
 Cypress end-to-end test project about registering on [preprod.backmarket.fr](https://preprod.backmarket.fr/register) using the register page. preprod.backmarket.fr/register
 
+Author: Romain SEITE
+Tools used : Github, Cypress, Git, VSC
+
 ## Index
 
 * [**Feature**](cypress/integration/register.feature) : register test scenarios. They are in cypress/integration
