@@ -1,7 +1,6 @@
 # backMarketRegister
 
-Cypress end-to-end test project about registering on [preprod.backmarket.fr](https://preprod.backmarket.fr/register)
-Using the register page preprod.backmarket.fr/register
+Cypress end-to-end test project about registering on [preprod.backmarket.fr](https://preprod.backmarket.fr/register) using the register page. preprod.backmarket.fr/register
 
 ## Index
 
@@ -12,7 +11,6 @@ Using the register page preprod.backmarket.fr/register
 * [**Video**](#Video) : video of the tests automated with Cypress. They are in cypress/videos in both .mp4 and .gif
 
 * [**Screenshots**](#Screenshots) : screenshots of the dashboard and of the report of the 6 tests E2E. They are in cypress/screenshots
-
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
