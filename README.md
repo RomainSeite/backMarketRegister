@@ -73,7 +73,8 @@ Tools used : Github, Cypress, Git, VSC, Chrome
 
 ### Video
 
-**Video of the tests :**
+Video of the tests :
+
 ![Video](cypress/videos/register.spec.js.gif)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
