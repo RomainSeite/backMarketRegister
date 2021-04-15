@@ -101,12 +101,6 @@ Tools used : Github, Cypress, Git, VSC, Chrome
 | 1 upper case |
 | 1 number     |
 
-| Aligné à gauche  | Centré          | Aligné à droite |
-| :--------------- |:---------------:| -----:|
-| Aligné à gauche  | 
-| Aligné à gauche  | est             |   Aligné à droite |
-| Aligné à gauche  | centré          |    Aligné à droite |
-
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### Video
