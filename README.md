@@ -94,13 +94,18 @@ Tools used : Github, Cypress, Git, VSC, Chrome
         And the user can't register
 
    **Example**: 
-    |<condition>|
+    | <condition> |
     |:-|
     | 8 characters |
     | 1 lower case |
     | 1 upper case |
     | 1 number     |
 
+| Aligné à gauche  | Centré          | Aligné à droite |
+| :--------------- |:---------------:| -----:|
+| Aligné à gauche  |   ce texte        |  Aligné à droite |
+| Aligné à gauche  | est             |   Aligné à droite |
+| Aligné à gauche  | centré          |    Aligné à droite |
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### Video
