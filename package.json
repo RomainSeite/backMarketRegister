@@ -1,0 +1,16 @@
+{
+  "name": "backMarketRegister",
+  "version": "1.0.0",
+  "description": "Cypress end-to-end tests project about registering on preprod.backmarket.fr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "SEITE Romain",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.9.1"
+  }
+}
