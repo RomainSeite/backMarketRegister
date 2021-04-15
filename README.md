@@ -93,9 +93,7 @@ Tools used : Github, Cypress, Git, VSC, Chrome
         
         And the user can't register
 
-   **Example**: 
-   
-| <condition> |
+   **Example**: | **condition** |
 | :----------- |
 | 8 characters |
 | 1 lower case |
