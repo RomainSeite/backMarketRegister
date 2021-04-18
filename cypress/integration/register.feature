@@ -1,46 +1,41 @@
 Feature: Register
-    Background: User on Register Page
+    Background: 
+        Given a user on register page
+        And correct email, first&last name, password
 
-    Scenario: Successful Register
-        Given correct credentials
+Scenario: Successful Register
         When registering
-        Then the user should be connected
-        And the user should be redirected to his shopping cart
+        Then the user should be redirected
 
-    Scenario: Email Already in Use
-        Given correct credentials
-        But the email is already in use
+Scenario: Email Already in Use
+        Given the email is already in use
         When registering
-        Then an error "email already in use" should appear
-        And the user can't register
+        Then an email error should appear
+        And the register shouldn't work
 
 Scenario: Wrong Email
-        Given correct credentials
-        But an invalid email
+        Given an invalid email
         When registering
-        Then an error "email invalid" should appear
-        And the user can't register
+        Then an email error should appear
+        And the register shouldn't work
 
 Scenario: No First Name
-        Given correct credentials
-        But no first name
+        Given no first name
         When registering
-        Then an error "please fill out this field" should appear
-        And the user can't register
+        Then a first name error should appear
+        And the register shouldn't work
 
 Scenario: No Last Name
-        Given correct credentials
-        But no last name
+        Given no last name
         When registering
-        Then an error "please fill out this field" should appear
-        And the user can't register
+        Then a last name error should appear
+        And the register shouldn't work
     
 Scenario Outline: Wrong Password
-        Given correct credentials
-        But the password hasn't "<condition>"
+        Given the password doesn't have "<condition>"
         When registering
-        Then an error "please type a correct password" should appear
-        And the user can't register
+        Then a password error should appear
+        And the register shouldn't work
 
     Example: <condition>
     | 8 characters |
