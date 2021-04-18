@@ -1,4 +1,4 @@
 {
   "projectId": "idg5qt",
-  "testFiles": "**/*.{feature,features}"
+  "testFiles": "**/*.feature"
 }

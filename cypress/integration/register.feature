@@ -1,44 +1,45 @@
-Feature: Register
-    Background: 
-        Given a user on register page
-        And correct email, first&last name, password
+Feature: register
 
-Scenario: Successful Register
+  As a user on register page with correct email, first&last name, password
+  I want to register
+  So I can start using the site for shopping
+
+  Acceptance conditions:
+    -I am asked a valid e-mail
+    -I am asked a password with at least 8 characters, 1 uppercase, 1 lowercase, 1 number
+    -Otherwise I can't register and I stay at the same page
+
+    
+  Background: 
+        Given a user on register page
+        Given correct email, first&last name, password
+
+
+  Scenario: [register] Successful Register
         When registering
         Then the user should be redirected
 
-Scenario: Email Already in Use
+  Scenario: Email Already in Use
         Given the email is already in use
         When registering
-        Then an email error should appear
+        Then an error email already in use should appear
         And the register shouldn't work
 
-Scenario: Wrong Email
+  Scenario: Wrong Email
         Given an invalid email
         When registering
-        Then an email error should appear
+        Then an error email invalid should appear
         And the register shouldn't work
 
-Scenario: No First Name
+  Scenario: No First Name
         Given no first name
         When registering
         Then a first name error should appear
         And the register shouldn't work
 
-Scenario: No Last Name
+  Scenario: No Last Name
         Given no last name
         When registering
         Then a last name error should appear
         And the register shouldn't work
     
-Scenario Outline: Wrong Password
-        Given the password doesn't have "<condition>"
-        When registering
-        Then a password error should appear
-        And the register shouldn't work
-
-    Example: <condition>
-    | 8 characters |
-    | 1 lower case |
-    | 1 upper case |
-    | 1 number     |
