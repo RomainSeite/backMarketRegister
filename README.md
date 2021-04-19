@@ -8,19 +8,17 @@ Tools used : Github, Cypress, Git, VSC, Chrome
 
 ## Index
 
-* [**Scenarios**](cypress/integration/register.feature) : register test scenarios in Gherkin. They are found in cypress/integration
+* [**Test Scenarios/Feature File**](cypress/integration/register.feature) : register test scenarios in Gherkin. They are found in cypress/integration
 
-* [**E2E tests**](cypress/integration/register.spec.js) : automated register tests in Javascript. They are found in cypress/integration
+* [**E2E tests**](cypress/integration/register/register.spec.js) : automated register tests in Javascript. They are found in cypress/integration/register
 
-* [**Video**](#Video) : video of the tests automated with Cypress. They are found in cypress/videos in both .mp4 and .gif
-
-* [**Screenshots**](#Screenshots) : screenshots of the dashboard and of the report of the 6 tests E2E. They are found in cypress/screenshots
+* [**Screenshots**](#Screenshots) : screenshot of the aftermath of the tests. They are found in cypress/screenshots
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### Scenarios :
 
-**Feature: Register**
+[**Feature: Register**](cypress/integration/register.feature)
 
   As a user on register page with correct email, first&last name, password
   I want to register
@@ -81,7 +79,7 @@ Tools used : Github, Cypress, Git, VSC, Chrome
         
         And the register shouldn't work
     
-**Scenario Outline: Password has "<condition>"**
+**Scenario Outline: Password has "condition"**
 
         Given the password has "<condition>"
         
@@ -101,21 +99,10 @@ Tools used : Github, Cypress, Git, VSC, Chrome
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### Video
-
-Video of the tests :
-
-![Video](cypress/videos/register.spec.js.gif)
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 ### Screenshots
 
-**Dashboard** :
-![dashboard](cypress/screenshots/dashboardBackMarketRegistration.png)
-You can see I started with 1 test and waited it to work fine before writing all tests
+**Aftermath** :
+![aftermath](cypress/screenshots/aftermath.png)
 
-**Report** :
-![**report**](cypress/screenshots/reportBlackMarketregister.png)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
