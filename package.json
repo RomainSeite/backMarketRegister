@@ -1,16 +1,25 @@
 {
   "name": "backMarketRegister",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Cypress end-to-end tests project about registering on preprod.backmarket.fr",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:register": "cypress run -s 'cypress/integration/register.feature'"
   },
   "keywords": [],
   "author": "SEITE Romain",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^6.9.1"
+    "cypress": "^6.9.1",
+    "cypress-cucumber-preprocessor": "^4.0.3"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }

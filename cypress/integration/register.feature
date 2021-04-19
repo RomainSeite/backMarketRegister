@@ -1,49 +1,57 @@
-Feature: Register
-    Background: User on Register Page
+Feature: register
 
-    Scenario: Successful Register
-        Given correct credentials
-        When registering
-        Then the user should be connected
-        And the user should be redirected to his shopping cart
+  As a user on register page with correct email, first&last name, password
+  I want to register
+  So I can start using the site for shopping
 
-    Scenario: Email Already in Use
-        Given correct credentials
-        But the email is already in use
-        When registering
-        Then an error "email already in use" should appear
-        And the user can't register
+  Acceptance conditions:
+    -I am asked a valid e-mail
+    -I am asked a password with at least 8 characters, 1 uppercase, 1 lowercase, 1 number
+    -Otherwise I can't register and I stay at the same page
 
-Scenario: Wrong Email
-        Given correct credentials
-        But an invalid email
-        When registering
-        Then an error "email invalid" should appear
-        And the user can't register
-
-Scenario: No First Name
-        Given correct credentials
-        But no first name
-        When registering
-        Then an error "please fill out this field" should appear
-        And the user can't register
-
-Scenario: No Last Name
-        Given correct credentials
-        But no last name
-        When registering
-        Then an error "please fill out this field" should appear
-        And the user can't register
     
-Scenario Outline: Wrong Password
-        Given correct credentials
-        But the password hasn't "<condition>"
-        When registering
-        Then an error "please type a correct password" should appear
-        And the user can't register
+  Background: 
+        Given a user on register page
+        Given correct email, first&last name, password
 
-    Example: <condition>
-    | 8 characters |
-    | 1 lower case |
-    | 1 upper case |
-    | 1 number     |
+
+  Scenario: Successful Register
+        When registering
+        Then the user should be redirected
+
+  Scenario: Email Already in Use
+        Given the email is already in use
+        When registering
+        Then an error email already in use should appear
+        And the register shouldn't work
+
+  Scenario: Wrong Email
+        Given an invalid email
+        When registering
+        Then an error email invalid should appear
+        And the register shouldn't work
+
+  Scenario: No First Name
+        Given no first name
+        When registering
+        Then a first name error should appear
+        And the register shouldn't work
+
+  Scenario: No Last Name
+        Given no last name
+        When registering
+        Then a last name error should appear
+        And the register shouldn't work
+
+  Scenario Outline: Password has "<condition>"
+        Given the password has "<condition>"
+        When registering
+        Then a password error should appear
+        And the register shouldn't work
+
+   Examples: 
+| condition      |
+| not8Characters |
+| noLowerCase    |
+| noUpperCase    |
+| noNumber       |
