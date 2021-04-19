@@ -15,7 +15,7 @@ Feature: register
         Given correct email, first&last name, password
 
 
-  Scenario: [register] Successful Register
+  Scenario: Successful Register
         When registering
         Then the user should be redirected
 
@@ -42,4 +42,16 @@ Feature: register
         When registering
         Then a last name error should appear
         And the register shouldn't work
-    
+
+  Scenario Outline: Password has "<condition>"
+        Given the password has "<condition>"
+        When registering
+        Then a password error should appear
+        And the register shouldn't work
+
+   Examples: 
+| condition      |
+| not8Characters |
+| noLowerCase    |
+| noUpperCase    |
+| noNumber       |

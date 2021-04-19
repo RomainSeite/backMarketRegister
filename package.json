@@ -1,6 +1,6 @@
 {
   "name": "backMarketRegister",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Cypress end-to-end tests project about registering on preprod.backmarket.fr",
   "main": "index.js",
   "scripts": {
