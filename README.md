@@ -102,7 +102,7 @@ Tools used : Github, Cypress, Git, VSC, Chrome
 ### Screenshots
 
 **Aftermath** :
-![aftermath](cypress/screenshots/aftermath.png)
+![aftermath](cypress/screenshots/aftermath.png?raw=true)
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
